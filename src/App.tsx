@@ -18,28 +18,30 @@ function App() {
         <div className="App min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
           <Routes>
             <Route path="/" element={
-              <> <Navbar />
+              <>
                 <Home />
+                <Navbar />
                 <Footer />
               </>
             } />
             <Route path="/about" element={
               <>
-               <Navbar />
-               <About />
+                <About />
+                <Navbar />
                 <Footer />
               </>
             } />
             <Route path="/contact" element={
               <>
-                 <Navbar />
                 <Contact />
+                <Navbar />
                 <Footer />
               </>
             } />
             <Route path="/courses" element={
-              <> <Navbar />
+              <>
                 <Courses />
+                <Navbar />
                 <Footer />
               </>
             } />
