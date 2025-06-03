@@ -6,7 +6,14 @@ const About = () => {
     <div className="min-h-screen bg-white dark:bg-gray-900 transition-colors duration-300">
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-[#001f4d] to-[#003366] dark:from-gray-800 dark:to-gray-900 py-20">
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+        <div className="absolute inset-0">
+          <img 
+            src="https://images.unsplash.com/photo-1556761175-b413da4baf72?w=1200&h=600&fit=crop"
+            alt="About us hero"
+            className="w-full h-full object-cover opacity-30"
+          />
+          <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+        </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-4xl">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-left">

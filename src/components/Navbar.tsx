@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, User } from 'lucide-react';
 import ThemeToggle from './ThemeToggle';
 
 const Navbar = () => {
@@ -38,7 +38,20 @@ const Navbar = () => {
               </Link>
             </li>
           ))}
-          <li>
+          <li className="flex items-center space-x-4">
+            <Link
+              to="/login"
+              className="text-white hover:text-[#ff6b35] transition-colors duration-300 flex items-center space-x-1"
+            >
+              <User className="w-4 h-4" />
+              <span>Login</span>
+            </Link>
+            <Link
+              to="/signup"
+              className="bg-[#ff6b35] text-white px-4 py-2 rounded-lg hover:bg-[#e55a2b] transition-colors duration-300"
+            >
+              Sign Up
+            </Link>
             <ThemeToggle />
           </li>
         </ul>
@@ -72,6 +85,24 @@ const Navbar = () => {
                 </Link>
               </li>
             ))}
+            <li className="pt-2 border-t border-gray-700">
+              <Link
+                to="/login"
+                onClick={() => setIsMenuOpen(false)}
+                className="block text-white hover:text-[#ff6b35] transition-colors duration-300 py-2"
+              >
+                Login
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/signup"
+                onClick={() => setIsMenuOpen(false)}
+                className="block bg-[#ff6b35] text-white px-4 py-2 rounded-lg hover:bg-[#e55a2b] transition-colors duration-300 text-center"
+              >
+                Sign Up
+              </Link>
+            </li>
           </ul>
         </div>
       )}
