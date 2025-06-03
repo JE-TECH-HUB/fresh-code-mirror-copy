@@ -1,5 +1,6 @@
 
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const socialMedia = [
@@ -10,14 +11,14 @@ const Footer = () => {
   ];
 
   const navLinks = [
-    { name: 'Home', href: '#home' },
-    { name: 'Courses', href: '#courses' },
-    { name: 'About Us', href: '#about' },
-    { name: 'Contact', href: '#contact' }
+    { name: 'Home', href: '/' },
+    { name: 'Courses', href: '/courses' },
+    { name: 'About Us', href: '/about' },
+    { name: 'Contact', href: '/contact' }
   ];
 
   return (
-    <footer id="contact" className="section-dark-blue py-12">
+    <footer className="bg-[#001f4d] dark:bg-gray-900 py-12 transition-colors duration-300">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
           {/* Logo and Description */}
@@ -34,12 +35,12 @@ const Footer = () => {
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.name}>
-                  <a
-                    href={link.href}
-                    className="text-gray-300 hover:text-orange transition-colors duration-300"
+                  <Link
+                    to={link.href}
+                    className="text-gray-300 hover:text-[#ff6b35] transition-colors duration-300"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -53,7 +54,7 @@ const Footer = () => {
                 <a
                   key={social.name}
                   href={social.href}
-                  className="text-2xl hover:text-orange transition-colors duration-300"
+                  className="text-2xl hover:text-[#ff6b35] transition-colors duration-300"
                   title={social.name}
                 >
                   {social.icon}
