@@ -1,0 +1,55 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary-dark-blue: #001f4d;
+  --accent-orange: #ff6b35;
+  --text-light: #cccccc;
+  --text-dark: #333333;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-primary {
+  @apply bg-[#001f4d] text-white px-6 py-3 rounded-lg hover:bg-[#003366] transition-colors duration-300;
+}
+
+.btn-outline {
+  @apply border-2 border-[#001f4d] text-[#ff6b35] px-6 py-3 rounded-lg hover:bg-[#001f4d] hover:text-white transition-all duration-300;
+}
+
+.section-dark-blue {
+  @apply bg-[#001f4d];
+}
+
+.section-black {
+  @apply bg-black;
+}
+
+.text-orange {
+  @apply text-[#ff6b35];
+}
+
+.text-primary-blue {
+  @apply text-[#001f4d];
+}
+
+.sticky-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
