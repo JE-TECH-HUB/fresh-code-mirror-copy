@@ -41,7 +41,15 @@ const HeroCarousel = () => {
 
   return (
     <div className="relative h-screen flex items-center bg-gradient-to-br from-[#001f4d] to-[#003366] dark:from-gray-800 dark:to-gray-900">
-      <div className="absolute inset-0 bg-black bg-opacity-40"></div>
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=800&fit=crop"
+          alt="Tech background"
+          className="w-full h-full object-cover opacity-20"
+        />
+        <div className="absolute inset-0 bg-black bg-opacity-60"></div>
+      </div>
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center h-full min-h-[80vh]">
